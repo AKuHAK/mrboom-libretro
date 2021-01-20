@@ -18,12 +18,12 @@ jobs:
         git fetch --prune --unshallow
     - name: Compile project
       run: |
-        git clone https://github.com/AKuHAK/Retroarch.git
+        git clone https://github.com/AKuHAK/RetroArch.git
         git submodule init
         git submodule update
         make platform=ps2
         cp mrboom_libretro_ps2.a ./RetroArch/libretro_ps2.a
-        cd ./Retroarch
+        cd ./RetroArch
         make -f Makefile.ps2.salamander -j1 release      
         make -f Makefile.ps2 -j1
         mkdir .retroarch-precompiled
@@ -49,8 +49,8 @@ jobs:
         path: |
           *.elf
           *.ELF
-          Retroarch/retroarch-precompiled/
-          Retroarch/*.elf
+          RetroArch/retroarch-precompiled/
+          RetroArch/*.elf
     # 'path' will create artifact with all *.elf in working directory
     # you can change this
 
