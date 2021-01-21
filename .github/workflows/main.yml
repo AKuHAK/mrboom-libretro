@@ -26,9 +26,9 @@ jobs:
         cd ./RetroArch
         make -f Makefile.ps2.salamander -j1 release      
         make -f Makefile.ps2 -j1
-        mkdir .retroarch-precompiled
-        cp -r ./* .retroarch-precompiled/
-        mv .retroarch-precompiled/ retroarch-precompiled/
+        git clone https://github.com/libretro/libretro-super
+        mkdir retroarch-precompiled
+        cp -r libretro-super/dist/* retroarch-precompiled/
     # commands for compiling your project
         
     # - name: Prepare artifacts
