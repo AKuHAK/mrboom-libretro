@@ -18,7 +18,7 @@ jobs:
         git fetch --prune --unshallow
     - name: Compile project
       run: |
-        git clone https://github.com/AKuHAK/RetroArch.git
+        git clone https://github.com/AKuHAK/RetroArch.git -b ps2_hdd
         git submodule init
         git submodule update
         make platform=ps2
