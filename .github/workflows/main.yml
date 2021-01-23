@@ -26,9 +26,9 @@ jobs:
         cd ./RetroArch
         make -f Makefile.ps2.salamander -j1 release
         make -f Makefile.ps2 -j1 release
-        git clone https://github.com/libretro/libretro-super
-        mkdir retroarch-precompiled
-        cp -r libretro-super/dist/* retroarch-precompiled/
+    #    git clone https://github.com/libretro/libretro-super
+    #    mkdir retroarch-precompiled
+    #    cp -r libretro-super/dist/* retroarch-precompiled/
     # commands for compiling your project
         
     # - name: Prepare artifacts
@@ -49,8 +49,9 @@ jobs:
         path: |
           *.elf
           *.ELF
-          RetroArch/retroarch-precompiled/
           RetroArch/*.elf
+          
+    #     RetroArch/retroarch-precompiled/
     # 'path' will create artifact with all *.elf in working directory
     # you can change this
 
