@@ -26,7 +26,7 @@ jobs:
         cd ./RetroArch
         make -f Makefile.ps2.salamander -j1 release
         make -f Makefile.ps2 -j1 release
-        mkdir RETROARCH/cores
+        mkdir -p RETROARCH/cores
         mv raboot.elf RETROARCH/raboot.elf
         mv retroarchps2.elf RETROARCH/cores/mrboom_libretro_ps2.elf
     #    git clone https://github.com/libretro/libretro-super
